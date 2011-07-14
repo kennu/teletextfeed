@@ -1,0 +1,33 @@
+<%= form_for(@subpage) do |f| %>
+  <% if @subpage.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@subpage.errors.count, "error") %> prohibited this subpage from being saved:</h2>
+
+      <ul>
+      <% @subpage.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :page %><br />
+    <%= f.text_field :page %>
+  </div>
+  <div class="field">
+    <%= f.label :number %><br />
+    <%= f.text_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :raw_content %><br />
+    <%= f.text_area :raw_content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

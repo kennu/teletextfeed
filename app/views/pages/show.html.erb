@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Number:</b>
+  <%= @page.number %>
+</p>
+
+<p>
+  <b>Next number:</b>
+  <%= @page.next_number %>
+</p>
+
+<p>
+  <b>Prev number:</b>
+  <%= @page.prev_number %>
+</p>
+
+
+<%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Back', pages_path %>

@@ -1,0 +1,29 @@
+<h1>Listing subpages</h1>
+
+<table>
+  <tr>
+    <th>Page</th>
+    <th>Number</th>
+    <th>Content</th>
+    <th>Raw content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @subpages.each do |subpage| %>
+  <tr>
+    <td><%= subpage.page %></td>
+    <td><%= subpage.number %></td>
+    <td><%= subpage.content %></td>
+    <td><%= subpage.raw_content %></td>
+    <td><%= link_to 'Show', subpage %></td>
+    <td><%= link_to 'Edit', edit_subpage_path(subpage) %></td>
+    <td><%= link_to 'Destroy', subpage, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Subpage', new_subpage_path %>

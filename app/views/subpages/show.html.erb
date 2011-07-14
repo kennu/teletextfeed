@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Page:</b>
+  <%= @subpage.page %>
+</p>
+
+<p>
+  <b>Number:</b>
+  <%= @subpage.number %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @subpage.content %>
+</p>
+
+<p>
+  <b>Raw content:</b>
+  <%= @subpage.raw_content %>
+</p>
+
+
+<%= link_to 'Edit', edit_subpage_path(@subpage) %> |
+<%= link_to 'Back', subpages_path %>

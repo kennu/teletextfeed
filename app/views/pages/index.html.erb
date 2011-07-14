@@ -1,0 +1,27 @@
+<h1>Listing pages</h1>
+
+<table>
+  <tr>
+    <th>Number</th>
+    <th>Next number</th>
+    <th>Prev number</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pages.each do |page| %>
+  <tr>
+    <td><%= page.number %></td>
+    <td><%= page.next_number %></td>
+    <td><%= page.prev_number %></td>
+    <td><%= link_to 'Show', page %></td>
+    <td><%= link_to 'Edit', edit_page_path(page) %></td>
+    <td><%= link_to 'Destroy', page, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Page', new_page_path %>
