@@ -3,6 +3,8 @@ Teletextfeed::Application.routes.draw do
 
   resources :subpages
   resources :pages
+  match 'atom' => 'feeds#atom'
+  match 'rss' => 'feeds#rss'
   root :to => 'pages#index'
 
   # The priority is based upon order of creation:

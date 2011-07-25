@@ -12,6 +12,7 @@ gem 'devise'
 gem 'omniauth'
 gem 'cancan'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+gem 'feedtools'
 
 # Use unicorn as the web server
 # gem 'unicorn'

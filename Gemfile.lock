@@ -54,6 +54,10 @@ GEM
       multipart-post (~> 1.1.0)
       rack (< 2, >= 1.1.0)
     fastercsv (1.5.4)
+    feedtools (0.2.29)
+      activerecord (>= 1.10.1)
+      builder (>= 1.2.4)
+      uuidtools (>= 1.0.0)
     haml (3.1.2)
     i18n (0.5.0)
     jquery-rails (1.0.12)
@@ -146,6 +150,7 @@ GEM
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.29)
+    uuidtools (2.1.2)
     warden (1.0.4)
       rack (>= 1.0)
 
@@ -155,6 +160,7 @@ PLATFORMS
 DEPENDENCIES
   cancan
   devise
+  feedtools
   jquery-rails
   json
   omniauth
