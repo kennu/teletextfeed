@@ -31,11 +31,11 @@ module Teletext
       pages = []
       page = get_page(start_page)
       prev_number = 0
-      while page != nil && page.number > prev_number
+      while page != nil && page[:number] > prev_number
         yield page if block_given?
         pages << page
-        prev_number = page.number
-        page = get_next_page(page.number)
+        prev_number = page[:number]
+        page = get_next_page(page[:number])
       end
       pages
     end
